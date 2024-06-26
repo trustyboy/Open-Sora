@@ -14,12 +14,12 @@ model = dict(
 vae = dict(
     type="VideoAutoencoderKL",
     from_pretrained="stabilityai/sd-vae-ft-ema",
-    micro_batch_size=4,
+    micro_batch_size=1,
 )
 text_encoder = dict(
     type="t5",
     from_pretrained="DeepFloyd/t5-v1_1-xxl",
-    model_max_length=120,
+    model_max_length=60,
 )
 scheduler = dict(
     type="iddpm",
